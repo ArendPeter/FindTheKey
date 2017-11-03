@@ -5,9 +5,39 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sBox</sprite>
+    <sprite>sprites\sKey</sprite>
+    <sprite>sprites\sDoor</sprite>
+    <sprite>sprites\sWall</sprite>
+    <sprite>sprites\sPlayer</sprite>
+    <sprite>sprites\sButton</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\oWall</object>
+    <object>objects\oDoor</object>
+    <object>objects\oPlayer</object>
+    <object>objects\oBarrel</object>
+    <object>objects\oKey</object>
+    <object>objects\oButton_lvl1</object>
+    <object>objects\oButton_lvl2</object>
+    <object>objects\oButton_lvl3</object>
+    <object>objects\oButton_lvl4</object>
+    <object>objects\oButton_lvl5</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_menu</room>
+    <room>rooms\room_dog</room>
+    <room>rooms\room_cat</room>
+    <room>rooms\room_fish</room>
+    <room>rooms\room_zebra</room>
+    <room>rooms\room_lion</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
