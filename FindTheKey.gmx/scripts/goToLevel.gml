@@ -10,5 +10,10 @@ if(argument_count == 2){
 with(oLevelControl){
     level_index = target_level;
     level_type = target_type;
-    room_goto(levels[? target_type+"_"+string(target_level)]);
+    
+    if(level_states[? level_type+"_"+string(level_index) ] == LEVEL_STATE.UNPLAYED){
+        level_states[? level_type+"_"+string(level_index) ] = LEVEL_STATE.PLAYED;
+    }
+    
+    room_goto(levels[? level_type+"_"+string(level_index)]);
 }

@@ -23,6 +23,7 @@
       <script>scripts\isLevelBeat.gml</script>
       <script>scripts\getLevelScore.gml</script>
       <script>scripts\goToRoom.gml</script>
+      <script>scripts\getLevelState.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

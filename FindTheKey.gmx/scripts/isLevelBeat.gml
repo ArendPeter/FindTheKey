@@ -8,6 +8,6 @@ if(argument_count == 2){
 }
 
 with(oLevelControl){
-    var output = beat_levels[? target_type+"_"+string(target_level)];
+    var output = level_states[? target_type+"_"+string(target_level)] == LEVEL_STATE.COMPLETE;
     return output;
 }

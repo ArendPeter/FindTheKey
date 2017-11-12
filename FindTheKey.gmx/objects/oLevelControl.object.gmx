@@ -29,7 +29,7 @@
 level_type = "NONE";
 
 levels = ds_map_create();
-beat_levels = ds_map_create();
+level_states = ds_map_create();
 level_scores = ds_map_create();
 
 levels[? "NORMAL_0"] = room_dog; //levels[0]
@@ -45,13 +45,18 @@ levels[? "HARD_2"] = room_zebra_hard;
 levels[? "HARD_3"] = room_fish_hard;
 levels[? "HARD_4"] = room_lion_hard;
 
+enum LEVEL_STATE { LOCKED, UNPLAYED, PLAYED, COMPLETE };
+
 for(var i = 0; i &lt; 5; i++){
-    beat_levels[? "NORMAL_"+string(i)] = false;
+    level_states[? "NORMAL_"+string(i)] = LEVEL_STATE.LOCKED;
     level_scores[? "NORMAL_"+string(i)] = 0;
     
-    beat_levels[? "HARD_"+string(i)] = false;
+    level_states[? "HARD_"+string(i)] = LEVEL_STATE.LOCKED;
     level_scores[? "HARD_"+string(i)] = 0;
 }
+
+level_states[? "NORMAL_0" ] = LEVEL_STATE.UNPLAYED;
+level_states[? "HARD_0" ] = LEVEL_STATE.UNPLAYED;
 
 room_goto_next();
 </string>
