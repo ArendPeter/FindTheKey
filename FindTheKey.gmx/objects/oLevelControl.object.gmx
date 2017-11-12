@@ -27,18 +27,21 @@
             <kind>1</kind>
             <string>level_index = -1;
 
-levels[0] = room_dog; //level_1
-levels[1] = room_cat; //level_2
-levels[2] = room_zebra; //level_3
-levels[3] = room_fish; //level_4
-levels[4] = room_lion; //level_5
+levels = ds_map_create();
+beat_levels = ds_map_create();
+level_scores = ds_map_create();
+
+levels[? "NORMAL_0"] = room_dog; //levels[0]
+//ds_map_add(levels, 0, room_dog);
+levels[? "NORMAL_1"] = room_cat; //levels[1]
+levels[? "NORMAL_2"] = room_zebra; //levels[2]
+levels[? "NORMAL_3"] = room_fish; //levels[3]
+levels[? "NORMAL_4"] = room_lion; //levels[4]
 
 for(var i = 0; i &lt; 5; i++){
-    beat_levels[i] = false;
-    level_scores[i] = 0;
+    beat_levels[? "NORMAL_"+string(i)] = false;
+    level_scores[? "NORMAL_"+string(i)] = 0;
 }
-
- 
 
 room_goto_next();
 </string>
