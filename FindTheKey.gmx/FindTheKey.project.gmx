@@ -25,6 +25,7 @@
     <object>objects\oPlayer</object>
     <object>objects\oBarrel</object>
     <object>objects\oKey</object>
+    <object>objects\oButton</object>
     <object>objects\oButton_lvl1</object>
     <object>objects\oButton_lvl2</object>
     <object>objects\oButton_lvl3</object>
