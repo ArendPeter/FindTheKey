@@ -38,6 +38,11 @@ if(place_free(x, y + dy)) y += dy;
 
 //beat level if you leave room to the right
 if(x &gt; room_width){
+    oLevelControl.level_scores[oLevelControl.level_index] = max(
+        oLevelControl.level_scores[oLevelControl.level_index],
+        instance_number(oBarrel)
+    )
+
     oLevelControl.beat_levels[oLevelControl.level_index] = true;
 
     oLevelControl.level_index++;

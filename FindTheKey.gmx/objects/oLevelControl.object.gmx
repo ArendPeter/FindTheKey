@@ -35,7 +35,10 @@ levels[4] = room_lion; //level_5
 
 for(var i = 0; i &lt; 5; i++){
     beat_levels[i] = false;
+    level_scores[i] = 0;
 }
+
+ 
 
 room_goto_next();
 </string>

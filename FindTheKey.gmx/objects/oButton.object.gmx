@@ -60,7 +60,8 @@ if(oLevelControl.beat_levels[my_level]){
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(font0);
-draw_text(x, y, text)
+draw_text(x, y-5, text);
+draw_text(x, y+17, oLevelControl.level_scores[my_level]);
 </string>
           </argument>
         </arguments>
