@@ -33,6 +33,10 @@ levels[2] = room_zebra; //level_3
 levels[3] = room_fish; //level_4
 levels[4] = room_lion; //level_5
 
+for(var i = 0; i &lt; 5; i++){
+    beat_levels[i] = false;
+}
+
 room_goto_next();
 </string>
           </argument>

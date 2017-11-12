@@ -52,7 +52,11 @@ room_goto(oLevelControl.levels[my_level])
             <kind>1</kind>
             <string>//draw level name w/ formatting
 draw_self();
-draw_set_color(c_gray);
+if(oLevelControl.beat_levels[my_level]){
+    draw_set_color(c_yellow);
+}else{
+    draw_set_color(c_gray);
+}
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(font0);

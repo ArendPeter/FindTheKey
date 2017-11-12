@@ -38,8 +38,14 @@ if(place_free(x, y + dy)) y += dy;
 
 //beat level if you leave room to the right
 if(x &gt; room_width){
+    oLevelControl.beat_levels[oLevelControl.level_index] = true;
+
     oLevelControl.level_index++;
     room_goto(oLevelControl.levels[oLevelControl.level_index]);
+}
+
+if(keyboard_check_pressed(vk_escape)){
+    room_goto(rm_menu);
 }
 </string>
           </argument>
