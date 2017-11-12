@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>level_index = -1;
+level_type = "NONE";
 
 levels = ds_map_create();
 beat_levels = ds_map_create();
@@ -38,9 +39,18 @@ levels[? "NORMAL_2"] = room_zebra; //levels[2]
 levels[? "NORMAL_3"] = room_fish; //levels[3]
 levels[? "NORMAL_4"] = room_lion; //levels[4]
 
+levels[? "HARD_0"] = room_dog_hard;
+levels[? "HARD_1"] = room_cat_hard;
+levels[? "HARD_2"] = room_zebra_hard;
+levels[? "HARD_3"] = room_fish_hard;
+levels[? "HARD_4"] = room_lion_hard;
+
 for(var i = 0; i &lt; 5; i++){
     beat_levels[? "NORMAL_"+string(i)] = false;
     level_scores[? "NORMAL_"+string(i)] = 0;
+    
+    beat_levels[? "HARD_"+string(i)] = false;
+    level_scores[? "HARD_"+string(i)] = 0;
 }
 
 room_goto_next();
@@ -70,7 +80,15 @@ room_goto_next();
     for(var i = 0; i &lt; 5; i++){
         var b = instance_create(96,64+(96*i),oButton);
         b.my_level = i;
+        b.my_level_type = "NORMAL";
         b.text = "LEVEL "+string(i+1);
+    }
+    
+    for(var i = 0; i &lt; 5; i++){
+        var b = instance_create(384,64+(96*i),oButton);
+        b.my_level = i;
+        b.my_level_type = "HARD";
+        b.text = "HARD "+string(i+1);
     }
 }
 </string>
@@ -96,7 +114,8 @@ room_goto_next();
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-draw_text(10, 10, level_index);
+draw_set_halign(fa_left);
+draw_text(10, 10, level_type+" "+string(level_index));
 </string>
           </argument>
         </arguments>

@@ -45,6 +45,11 @@
     <room>rooms\room_fish</room>
     <room>rooms\room_zebra</room>
     <room>rooms\room_lion</room>
+    <room>rooms\room_dog_hard</room>
+    <room>rooms\room_cat_hard</room>
+    <room>rooms\room_fish_hard</room>
+    <room>rooms\room_zebra_hard</room>
+    <room>rooms\room_lion_hard</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

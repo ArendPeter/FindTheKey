@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//goto room when pressed
-goToLevel(my_level);
+goToLevel(my_level, my_level_type);
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ goToLevel(my_level);
             <kind>1</kind>
             <string>//draw level name w/ formatting
 draw_self();
-if(isLevelBeat(my_level)){
+if(isLevelBeat(my_level, my_level_type)){
     draw_set_color(c_yellow);
 }else{
     draw_set_color(c_gray);
@@ -60,7 +60,7 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(font0);
 draw_text(x, y-5, text);
-draw_text(x, y+17, getLevelScore(my_level));
+draw_text(x, y+17, getLevelScore(my_level, my_level_type));
 </string>
           </argument>
         </arguments>

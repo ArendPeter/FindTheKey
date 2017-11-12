@@ -1,7 +1,7 @@
 with(oLevelControl){
-    level_scores[? "NORMAL_"+string(level_index)] = max(
-        level_scores[? "NORMAL_"+string(level_index)],
+    level_scores[? level_type+"_"+string(level_index)] = max(
+        level_scores[? level_type+"_"+string(level_index)],
         instance_number(oBarrel)
     )
-    beat_levels[? "NORMAL_"+string(level_index)] = true;
+    beat_levels[? level_type+"_"+string(level_index)] = true;
 }
