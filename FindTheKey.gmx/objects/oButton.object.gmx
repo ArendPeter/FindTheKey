@@ -26,8 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//goto room when pressed
-oLevelControl.level_index = my_level;
-room_goto(oLevelControl.levels[my_level])
+goToLevel(my_level);
 </string>
           </argument>
         </arguments>
@@ -52,7 +51,7 @@ room_goto(oLevelControl.levels[my_level])
             <kind>1</kind>
             <string>//draw level name w/ formatting
 draw_self();
-if(oLevelControl.beat_levels[my_level]){
+if(isLevelBeat(my_level)){
     draw_set_color(c_yellow);
 }else{
     draw_set_color(c_gray);
@@ -61,7 +60,7 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(font0);
 draw_text(x, y-5, text);
-draw_text(x, y+17, oLevelControl.level_scores[my_level]);
+draw_text(x, y+17, getLevelScore(my_level));
 </string>
           </argument>
         </arguments>

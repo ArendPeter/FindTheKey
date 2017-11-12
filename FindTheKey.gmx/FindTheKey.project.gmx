@@ -15,7 +15,16 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <scripts name="LevelControl">
+      <script>scripts\beatLevel.gml</script>
+      <script>scripts\goToNextLevel.gml</script>
+      <script>scripts\goToLevel.gml</script>
+      <script>scripts\isLevelBeat.gml</script>
+      <script>scripts\getLevelScore.gml</script>
+      <script>scripts\goToRoom.gml</script>
+    </scripts>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
