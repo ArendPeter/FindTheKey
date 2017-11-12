@@ -26,8 +26,10 @@
     <object>objects\oBarrel</object>
     <object>objects\oKey</object>
     <object>objects\oButton</object>
+    <object>objects\oLevelControl</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_splash</room>
     <room>rooms\rm_menu</room>
     <room>rooms\room_dog</room>
     <room>rooms\room_cat</room>
