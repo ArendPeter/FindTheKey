@@ -51,11 +51,11 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="oButton_lvl1" x="96" y="64" name="inst_6585C6CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oButton_lvl2" x="96" y="160" name="inst_105B1AE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oButton_lvl3" x="96" y="256" name="inst_40DDED4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oButton_lvl4" x="96" y="352" name="inst_DD77F007" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oButton_lvl5" x="96" y="448" name="inst_CA7D8D98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="96" y="64" name="inst_DB8FD572" locked="0" code="my_level = room_dog;&#xA;text = &quot;LEVEL 1&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="96" y="160" name="inst_BDE5BAC2" locked="0" code="my_level = room_cat;&#xA;text = &quot;LEVEL 2&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="96" y="256" name="inst_F1AC85F1" locked="0" code="my_level = room_fish;&#xA;text = &quot;LEVEL 3&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="96" y="352" name="inst_91459635" locked="0" code="my_level = room_zebra;&#xA;text = &quot;LEVEL 4&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="96" y="448" name="inst_4D773F5D" locked="0" code="my_level = room_lion;&#xA;text = &quot;LEVEL 5&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

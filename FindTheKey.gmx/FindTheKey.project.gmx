@@ -26,11 +26,6 @@
     <object>objects\oBarrel</object>
     <object>objects\oKey</object>
     <object>objects\oButton</object>
-    <object>objects\oButton_lvl1</object>
-    <object>objects\oButton_lvl2</object>
-    <object>objects\oButton_lvl3</object>
-    <object>objects\oButton_lvl4</object>
-    <object>objects\oButton_lvl5</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
