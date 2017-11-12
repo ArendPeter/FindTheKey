@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//goto room when pressed
-room_goto(my_level)
+oLevelControl.level_index = my_level;
+room_goto(oLevelControl.levels[my_level])
 </string>
           </argument>
         </arguments>

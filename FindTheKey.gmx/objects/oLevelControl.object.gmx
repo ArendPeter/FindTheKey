@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>levels[0] = room_dog; //level_1
+            <string>level_index = -1;
+
+levels[0] = room_dog; //level_1
 levels[1] = room_cat; //level_2
 levels[2] = room_zebra; //level_3
 levels[3] = room_fish; //level_4
@@ -55,26 +57,36 @@ room_goto_next();
           <argument>
             <kind>1</kind>
             <string>if(room == rm_menu){
-    var b1 = instance_create(96,64,oButton);
-    b1.my_level = levels[0];
-    b1.text = "LEVEL 1";
-    
-    var b2 = instance_create(96,160,oButton);
-    b2.my_level = levels[1];
-    b2.text = "LEVEL 2";
-    
-    var b3 = instance_create(96,256,oButton);
-    b3.my_level = levels[2];
-    b3.text = "LEVEL 3";
-    
-    var b4 = instance_create(96,352,oButton);
-    b4.my_level = levels[3];
-    b4.text = "LEVEL 4";
-    
-    var b5 = instance_create(96,448,oButton);
-    b5.my_level = levels[4];
-    b5.text = "LEVEL 5";
+    for(var i = 0; i &lt; 5; i++){
+        var b = instance_create(96,64+(96*i),oButton);
+        b.my_level = i;
+        b.text = "LEVEL "+string(i+1);
+    }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_white);
+draw_text(10, 10, level_index);
 </string>
           </argument>
         </arguments>
