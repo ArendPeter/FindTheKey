@@ -37,6 +37,49 @@ room_goto_next();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(room == rm_menu){
+    var b1 = instance_create(96,64,oButton);
+    b1.my_level = level_1;
+    b1.text = "LEVEL 1";
+    
+    var b2 = instance_create(96,160,oButton);
+    b2.my_level = level_2;
+    b2.text = "LEVEL 2";
+    
+    var b3 = instance_create(96,256,oButton);
+    b3.my_level = level_3;
+    b3.text = "LEVEL 3";
+    
+    var b4 = instance_create(96,352,oButton);
+    b4.my_level = level_4;
+    b4.text = "LEVEL 4";
+    
+    var b5 = instance_create(96,448,oButton);
+    b5.my_level = level_5;
+    b5.text = "LEVEL 5";
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
