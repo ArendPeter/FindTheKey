@@ -32,18 +32,19 @@ levels = ds_map_create();
 level_states = ds_map_create();
 level_scores = ds_map_create();
 
-levels[? "NORMAL_0"] = room_dog; //levels[0]
-//ds_map_add(levels, 0, room_dog);
-levels[? "NORMAL_1"] = room_cat; //levels[1]
-levels[? "NORMAL_2"] = room_zebra; //levels[2]
-levels[? "NORMAL_3"] = room_fish; //levels[3]
-levels[? "NORMAL_4"] = room_lion; //levels[4]
+var i = 0;
+levels[? "NORMAL_"+string(i)] = room_dog; i++;
+levels[? "NORMAL_"+string(i)] = room_cat; i++; 
+levels[? "NORMAL_"+string(i)] = room_zebra; i++;
+levels[? "NORMAL_"+string(i)] = room_fish; i++;
+levels[? "NORMAL_"+string(i)] = room_lion; i++;
 
-levels[? "HARD_0"] = room_dog_hard;
-levels[? "HARD_1"] = room_cat_hard;
-levels[? "HARD_2"] = room_zebra_hard;
-levels[? "HARD_3"] = room_fish_hard;
-levels[? "HARD_4"] = room_lion_hard;
+i = 0;
+levels[? "HARD_"+string(i)] = room_lion_hard; i++;
+levels[? "HARD_"+string(i)] = room_fish_hard; i++;
+levels[? "HARD_"+string(i)] = room_dog_hard; i++;
+levels[? "HARD_"+string(i)] = room_cat_hard; i++;
+levels[? "HARD_"+string(i)] = room_zebra_hard; i++;
 
 enum LEVEL_STATE { LOCKED, UNPLAYED, PLAYED, COMPLETE };
 
