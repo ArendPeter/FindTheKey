@@ -4,10 +4,9 @@ var target_type;
 if(argument_count == 2){
     target_type = argument[1];
 }else{
-    target_type = "NORMAL";
+    target_type = LEVEL_TYPE.NORMAL;
 }
 
 with(oLevelControl){
-    var output = level_states[? target_type+"_"+string(target_level)] == LEVEL_STATE.COMPLETE;
-    return output;
+    return level_states[? getLevelKey(target_type, target_level)] == LEVEL_STATE.COMPLETE;
 }

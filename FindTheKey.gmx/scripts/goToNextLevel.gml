@@ -1,9 +1,10 @@
 with(oLevelControl){
     level_index++;
     
-    if(level_states[? level_type+"_"+string(level_index) ] == LEVEL_STATE.UNPLAYED){
-        level_states[? level_type+"_"+string(level_index) ] = LEVEL_STATE.PLAYED;
+    var new_level = getLevelKey(level_type, level_index);
+    if(level_states[? new_level ] == LEVEL_STATE.UNPLAYED){
+        level_states[? new_level ] = LEVEL_STATE.PLAYED;
     }
     
-    room_goto(levels[? level_type+"_"+string(level_index)]);
+    room_goto(levels[? new_level]);
 }

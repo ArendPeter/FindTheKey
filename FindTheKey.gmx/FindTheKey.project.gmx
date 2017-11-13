@@ -24,6 +24,7 @@
       <script>scripts\getLevelScore.gml</script>
       <script>scripts\goToRoom.gml</script>
       <script>scripts\getLevelState.gml</script>
+      <script>scripts\getLevelKey.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

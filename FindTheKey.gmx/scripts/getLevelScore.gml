@@ -8,6 +8,5 @@ if(argument_count == 2){
 }
 
 with(oLevelControl){
-    var output = level_scores[? target_type+"_"+string(target_level)];
-    return output;
+    return level_scores[? getLevelKey(target_type, target_level) ];
 }
