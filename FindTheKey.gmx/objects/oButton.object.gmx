@@ -65,7 +65,12 @@ draw_set_color(color);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_set_font(font0);
-draw_text(x, y-5, text);
+var type_prefix;
+switch(my_level_type){
+case LEVEL_TYPE.NORMAL: type_prefix = "LEVEL "; break;
+case LEVEL_TYPE.HARD: type_prefix = "HARD "; break;
+}
+draw_text(x, y-5, type_prefix + string(my_level));
 draw_text(x, y+17, getLevelScore(my_level, my_level_type));
 </string>
           </argument>

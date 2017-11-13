@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enum LEVEL_TYPE { NONE, NORMAL, HARD };
+            <string>enum LEVEL_TYPE { NONE, NORMAL, HARD, LENGTH };
 enum LEVEL_STATE { LOCKED, UNPLAYED, PLAYED, COMPLETE };
 
 level_index = -1;
@@ -50,16 +50,13 @@ levels[? getLevelKey(LEVEL_TYPE.HARD, i)] = room_dog_hard; i++;
 levels[? getLevelKey(LEVEL_TYPE.HARD, i)] = room_cat_hard; i++;
 levels[? getLevelKey(LEVEL_TYPE.HARD, i)] = room_zebra_hard; i++;
 
-for(var i = 0; i &lt; 5; i++){
-    level_states[? getLevelKey(LEVEL_TYPE.NORMAL, i)] = LEVEL_STATE.LOCKED;
-    level_scores[? getLevelKey(LEVEL_TYPE.NORMAL, i)] = 0;
-    
-    level_states[? getLevelKey(LEVEL_TYPE.HARD, i)] = LEVEL_STATE.LOCKED;
-    level_scores[? getLevelKey(LEVEL_TYPE.HARD, i)] = 0;
+for(var t = LEVEL_TYPE.NORMAL; t &lt; LEVEL_TYPE.LENGTH; t++){
+    for(var i = 0; i &lt; 5; i++){
+        level_states[? getLevelKey(t, i)] = LEVEL_STATE.LOCKED;
+        level_scores[? getLevelKey(t, i)] = 0;
+    }
+    level_states[? getLevelKey(t, 0) ] = LEVEL_STATE.UNPLAYED;
 }
-
-level_states[? getLevelKey(LEVEL_TYPE.NORMAL, 0) ] = LEVEL_STATE.UNPLAYED;
-level_states[? getLevelKey(LEVEL_TYPE.HARD, 0) ] = LEVEL_STATE.UNPLAYED;
 
 room_goto_next();
 </string>
@@ -85,18 +82,12 @@ room_goto_next();
           <argument>
             <kind>1</kind>
             <string>if(room == rm_menu){
-    for(var i = 0; i &lt; 5; i++){
-        var b = instance_create(96,64+(96*i),oButton);
-        b.my_level = i;
-        b.my_level_type = LEVEL_TYPE.NORMAL;
-        b.text = "LEVEL "+string(i+1);
-    }
-    
-    for(var i = 0; i &lt; 5; i++){
-        var b = instance_create(384,64+(96*i),oButton);
-        b.my_level = i;
-        b.my_level_type = LEVEL_TYPE.HARD;
-        b.text = "HARD "+string(i+1);
+    for(var t = LEVEL_TYPE.NORMAL; t &lt; LEVEL_TYPE.LENGTH; t++){
+        for(var i = 0; i &lt; 5; i++){
+            var b = instance_create(96+(288*(t-1)),64+(96*i),oButton);
+            b.my_level = i;
+            b.my_level_type = t;
+        }
     }
 }
 </string>
